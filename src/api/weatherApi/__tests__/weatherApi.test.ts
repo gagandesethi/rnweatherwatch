@@ -1,4 +1,3 @@
-// weatherApi.test.ts
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import { getLocationCoordinates, getWeatherForecast } from '../weatherApi'; // Adjust the path as needed
@@ -17,12 +16,9 @@ describe('Weather API', () => {
                 { latitude: 51.5074, longitude: -0.1278, name: 'London' },
             ],
         };
-
         mock.onGet('https://geocoding-api.open-meteo.com/v1/search', { params: { name: location } })
             .reply(200, mockResponse);
-
         const result = await getLocationCoordinates(location);
-
         expect(result).toEqual(mockResponse.results);
         expect(result[0].name).toBe('London');
     });
@@ -37,12 +33,9 @@ describe('Weather API', () => {
                 weathercode: [0, 1, 2],
             },
         };
-
         mock.onGet('https://api.open-meteo.com/v1/forecast', { params: { latitude, longitude, daily: 'temperature_2m_max,temperature_2m_min,weathercode', timezone: 'auto' } })
             .reply(200, mockWeatherResponse);
-
         const result = await getWeatherForecast(latitude, longitude);
-
         expect(result).toEqual(mockWeatherResponse);
         expect(result.daily.temperature_2m_max).toEqual([15, 16, 17]);
     });
@@ -51,7 +44,6 @@ describe('Weather API', () => {
         const location = 'UnknownLocation';
         mock.onGet('https://geocoding-api.open-meteo.com/v1/search', { params: { name: location } })
             .reply(404);
-
         await expect(getLocationCoordinates(location)).rejects.toThrow();
     });
 
@@ -60,7 +52,6 @@ describe('Weather API', () => {
         const longitude = -0.1278;
         mock.onGet('https://api.open-meteo.com/v1/forecast', { params: { latitude, longitude, daily: 'temperature_2m_max,temperature_2m_min,weathercode', timezone: 'auto' } })
             .reply(404);
-
         await expect(getWeatherForecast(latitude, longitude)).rejects.toThrow();
     });
 });

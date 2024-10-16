@@ -1,12 +1,12 @@
-#Wed Oct 09 15:14:52 IST 2024
+#Mon Oct 14 13:49:10 IST 2024
 path.3=9/classes.dex
 path.2=14/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.3=/Users/gagsethi/Documents/RNCLI-WeatherWatch/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
-base.2=/Users/gagsethi/Documents/RNCLI-WeatherWatch/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
-base.1=/Users/gagsethi/Documents/RNCLI-WeatherWatch/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.0=/Users/gagsethi/Documents/RNCLI-WeatherWatch/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.3=/Users/gagsethi/Documents/rnweatherwatch/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
+base.2=/Users/gagsethi/Documents/rnweatherwatch/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
+base.1=/Users/gagsethi/Documents/rnweatherwatch/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.0=/Users/gagsethi/Documents/rnweatherwatch/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
